@@ -1,31 +1,25 @@
 (function ($) {
 
   "use strict";
+  
+  // |--------------------------------------------------------------------------
+  // | TABLE OF CONTENTS:
+  // |--------------------------------------------------------------------------
+  // |
+  // | 1. Placeholder
+  // | 2. Dynamic Background
+  // | 3. Menu
+  // | 4. Sticky Header
+  // | 5. One Page Navigation
+  // | 6. Progress Bar
+  // | 7. Ajax Contact Form And Appointment
+  // | 8. Light Gallery
+  // | 9. Social Button Hover
+  // | 10. Slick Slider
+  // | 11. particles
+  // | 12. Ripple
+  // | 13. Parallax Effect
 
-  /*
-  |--------------------------------------------------------------------------
-  | Template Name: Davix
-  | Author: Laralink
-  | Version: 1.0.0
-  |--------------------------------------------------------------------------
-  |--------------------------------------------------------------------------
-  | TABLE OF CONTENTS:
-  |--------------------------------------------------------------------------
-  |
-  | 1. Placeholder
-  | 2. Dynamic Background
-  | 3. Menu
-  | 4. Sticky Header
-  | 5. One Page Navigation
-  | 6. Progress Bar
-  | 7. Ajax Contact Form And Appointment
-  | 8. Light Gallery
-  | 9. Social Button Hover
-  | 10. Slick Slider
-  | 11. particles
-  | 12. Ripple
-  | 13. Parallax Effect
-  */
 
   /*--------------------------------------------------------------
     Scripts initialization
