@@ -1,7 +1,6 @@
 (function ($) {
-
   "use strict";
-  
+
   // |--------------------------------------------------------------------------
   // | TABLE OF CONTENTS:
   // |--------------------------------------------------------------------------
@@ -19,7 +18,6 @@
   // | 11. particles
   // | 12. Ripple
   // | 13. Parallax Effect
-
 
   /*--------------------------------------------------------------
     Scripts initialization
@@ -48,7 +46,6 @@
     parallaxEffect();
     rippleInit();
     new WOW().init();
-
   });
 
   $(window).on("scroll", function () {
@@ -69,10 +66,10 @@
   --------------------------------------------------------------*/
   function dynamicBackground() {
     // Background images
-    $('.st-dynamic-bg').each(function () {
-      var src = $(this).attr('data-src');
+    $(".st-dynamic-bg").each(function () {
+      var src = $(this).attr("data-src");
       $(this).css({
-        'background-image': 'url(' + src + ')'
+        "background-image": "url(" + src + ")",
       });
     });
   }
@@ -81,13 +78,18 @@
     3. Menu
   --------------------------------------------------------------*/
   function mainMenu() {
-    $('.st-nav').append('<span class="st-munu-toggle"><span></span></span>');
-    $('.menu-item-has-children').append('<span class="st-munu-dropdown-toggle"></span>');
-    $('.st-munu-toggle').on('click', function () {
-      $(this).toggleClass("st-toggle-active").siblings('.st-nav-list').slideToggle();;
+    $(".st-nav").append('<span class="st-munu-toggle"><span></span></span>');
+    $(".menu-item-has-children").append(
+      '<span class="st-munu-dropdown-toggle"></span>'
+    );
+    $(".st-munu-toggle").on("click", function () {
+      $(this)
+        .toggleClass("st-toggle-active")
+        .siblings(".st-nav-list")
+        .slideToggle();
     });
-    $('.st-munu-dropdown-toggle').on('click', function () {
-      $(this).toggleClass('active').siblings('ul').slideToggle();
+    $(".st-munu-dropdown-toggle").on("click", function () {
+      $(this).toggleClass("active").siblings("ul").slideToggle();
     });
   }
 
@@ -97,9 +99,9 @@
   function stickyHeader() {
     var scroll = $(window).scrollTop();
     if (scroll >= 10) {
-      $('.st-sticky-header').addClass('st-sticky-active');
+      $(".st-sticky-header").addClass("st-sticky-active");
     } else {
-      $('.st-sticky-header').removeClass('st-sticky-active');
+      $(".st-sticky-header").removeClass("st-sticky-active");
     }
   }
 
@@ -108,13 +110,16 @@
   --------------------------------------------------------------*/
   function onePageNavigation() {
     // Click To Go Top
-    $('.st-smooth-move').on('click', function () {
-      var thisAttr = $(this).attr('href');
+    $(".st-smooth-move").on("click", function () {
+      var thisAttr = $(this).attr("href");
       if ($(thisAttr).length) {
         var scrollPoint = $(thisAttr).offset().top - 10;
-        $('body,html').animate({
-          scrollTop: scrollPoint
-        }, 800);
+        $("body,html").animate(
+          {
+            scrollTop: scrollPoint,
+          },
+          800
+        );
       }
       return false;
     });
@@ -123,7 +128,7 @@
     var topLimit = 300,
       ultimateOffset = 200;
 
-    $('.st-onepage-nav').each(function () {
+    $(".st-onepage-nav").each(function () {
       var $this = $(this),
         $parent = $this.parent(),
         current = null,
@@ -169,28 +174,26 @@
     });
   }
 
-
   /*--------------------------------------------------------------
     6. Progress Bar
   --------------------------------------------------------------*/
   function progressBarInit() {
-    $('.st-progressbar').each(function () {
-      var progressPercentage = $(this).data('progress') + "%";
-      $(this).find('.st-progressbar-in').css('width', progressPercentage);
+    $(".st-progressbar").each(function () {
+      var progressPercentage = $(this).data("progress") + "%";
+      $(this).find(".st-progressbar-in").css("width", progressPercentage);
     });
   }
-
 
   /*--------------------------------------------------------------
     8. Light Gallery
   --------------------------------------------------------------*/
   function lightGallery() {
-    $('.st-lightgallery').each(function () {
+    $(".st-lightgallery").each(function () {
       $(this).lightGallery({
-        selector: '.st-lightbox-item',
+        selector: ".st-lightbox-item",
         subHtmlSelectorRelative: false,
         thumbnail: false,
-        mousewheel: true
+        mousewheel: true,
       });
     });
   }
@@ -199,25 +202,23 @@
     9. Social Button Hover
   --------------------------------------------------------------*/
   function socialBtnHover() {
-    $(".st-social-btn").hover(
-      function () {
-        $(this).addClass("active").siblings().removeClass('active');
-      }
-    )
+    $(".st-social-btn").hover(function () {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
   }
 
   /*--------------------------------------------------------------
     10. Slick Slider
-  --------------------------------------------------------------*/ 
+  --------------------------------------------------------------*/
   function slickInit() {
-    $('.st-slider').each(function () {
+    $(".st-slider").each(function () {
       // Slick Variable
-      var $ts = $(this).find('.slick-container');
-      var $slickActive = $(this).find('.slick-wrapper');
-      var $sliderNumber = $(this).siblings('.slider-number');
+      var $ts = $(this).find(".slick-container");
+      var $slickActive = $(this).find(".slick-wrapper");
+      var $sliderNumber = $(this).siblings(".slider-number");
 
       // Auto Play
-      var autoPlayVar = parseInt($ts.attr('data-autoplay'), 10);
+      var autoPlayVar = parseInt($ts.attr("data-autoplay"), 10);
       // Auto Play Time Out
       var autoplaySpdVar = 3000;
       if (autoPlayVar > 1) {
@@ -225,186 +226,187 @@
         autoPlayVar = 1;
       }
       // Slide Change Speed
-      var speedVar = parseInt($ts.attr('data-speed'), 10);
+      var speedVar = parseInt($ts.attr("data-speed"), 10);
       // Slider Loop
-      var loopVar = Boolean(parseInt($ts.attr('data-loop'), 10));
+      var loopVar = Boolean(parseInt($ts.attr("data-loop"), 10));
       // Slider Center
-      var centerVar = Boolean(parseInt($ts.attr('data-center'), 10));
+      var centerVar = Boolean(parseInt($ts.attr("data-center"), 10));
       // Pagination
-      var paginaiton = $(this).children().hasClass('pagination');
+      var paginaiton = $(this).children().hasClass("pagination");
       // Slide Per View
-      var slidesPerView = $ts.attr('data-slides-per-view');
+      var slidesPerView = $ts.attr("data-slides-per-view");
       if (slidesPerView == 1) {
         slidesPerView = 1;
       }
-      if (slidesPerView == 'responsive') {
-        var slidesPerView = parseInt($ts.attr('data-add-slides'), 10);
-        var lgPoint = parseInt($ts.attr('data-lg-slides'), 10);
-        var mdPoint = parseInt($ts.attr('data-md-slides'), 10);
-        var smPoint = parseInt($ts.attr('data-sm-slides'), 10);
-        var xsPoing = parseInt($ts.attr('data-xs-slides'), 10);
+      if (slidesPerView == "responsive") {
+        var slidesPerView = parseInt($ts.attr("data-add-slides"), 10);
+        var lgPoint = parseInt($ts.attr("data-lg-slides"), 10);
+        var mdPoint = parseInt($ts.attr("data-md-slides"), 10);
+        var smPoint = parseInt($ts.attr("data-sm-slides"), 10);
+        var xsPoing = parseInt($ts.attr("data-xs-slides"), 10);
       }
       // Fade Slider
-      var fadeVar = parseInt($($ts).attr('data-fade-slide'));
-      (fadeVar === 1) ? (fadeVar = true) : (fadeVar = false);
+      var fadeVar = parseInt($($ts).attr("data-fade-slide"));
+      fadeVar === 1 ? (fadeVar = true) : (fadeVar = false);
 
       // Slick Active Code
       $slickActive.slick({
         infinite: true,
         autoplay: autoPlayVar,
         dots: paginaiton,
-        centerPadding: '0',
+        centerPadding: "0",
         speed: speedVar,
         infinite: loopVar,
         autoplaySpeed: autoplaySpdVar,
         centerMode: centerVar,
         fade: fadeVar,
-        prevArrow: $(this).find('.slick-arrow-left'),
-        nextArrow: $(this).find('.slick-arrow-right'),
-        appendDots: $(this).find('.pagination'),
+        prevArrow: $(this).find(".slick-arrow-left"),
+        nextArrow: $(this).find(".slick-arrow-right"),
+        appendDots: $(this).find(".pagination"),
         slidesToShow: slidesPerView,
-        responsive: [{
-          breakpoint: 1600,
-          settings: {
-            slidesToShow: lgPoint
-          }
-        },
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: mdPoint
-          }
-        },
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: smPoint
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: xsPoing
-          }
-        }
-        ]
+        responsive: [
+          {
+            breakpoint: 1600,
+            settings: {
+              slidesToShow: lgPoint,
+            },
+          },
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: mdPoint,
+            },
+          },
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: smPoint,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: xsPoing,
+            },
+          },
+        ],
       });
-    })
+    });
   }
   /*--------------------------------------------------------------
     11. particles
-  --------------------------------------------------------------*/ 
+  --------------------------------------------------------------*/
   function particles() {
-    if ($.exists('#particles-js')) {
+    if ($.exists("#particles-js")) {
       particlesJS("particles-js", {
-        "particles": {
-          "number": {
-            "value": 355,
-            "density": {
-              "enable": true,
-              "value_area": 789.1476416322727
-            }
-          },
-          "color": {
-            "value": "#ffffff"
-          },
-          "shape": {
-            "type": "circle",
-            "stroke": {
-              "width": 0,
-              "color": "#000000"
+        particles: {
+          number: {
+            value: 355,
+            density: {
+              enable: true,
+              value_area: 789.1476416322727,
             },
-            "polygon": {
-              "nb_sides": 5
+          },
+          color: {
+            value: "#ffffff",
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000",
             },
-            "image": {
-              "src": "img/github.svg",
-              "width": 100,
-              "height": 100
-            }
+            polygon: {
+              nb_sides: 5,
+            },
+            image: {
+              src: "img/github.svg",
+              width: 100,
+              height: 100,
+            },
           },
-          "opacity": {
-            "value": 0.48927153781200905,
-            "random": false,
-            "anim": {
-              "enable": true,
-              "speed": 0.6,
-              "opacity_min": 0,
-              "sync": false
-            }
+          opacity: {
+            value: 0.48927153781200905,
+            random: false,
+            anim: {
+              enable: true,
+              speed: 0.6,
+              opacity_min: 0,
+              sync: false,
+            },
           },
-          "size": {
-            "value": 2,
-            "random": true,
-            "anim": {
-              "enable": true,
-              "speed": 5,
-              "size_min": 0,
-              "sync": false
-            }
+          size: {
+            value: 2,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 5,
+              size_min: 0,
+              sync: false,
+            },
           },
-          "line_linked": {
-            "enable": false,
-            "distance": 150,
-            "color": "#ffffff",
-            "opacity": 0.4,
-            "width": 1
+          line_linked: {
+            enable: false,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1,
           },
-          "move": {
-            "enable": true,
-            "speed": 0.2,
-            "direction": "none",
-            "random": true,
-            "straight": false,
-            "out_mode": "out",
-            "bounce": false,
-            "attract": {
-              "enable": false,
-              "rotateX": 600,
-              "rotateY": 1200
-            }
-          }
+          move: {
+            enable: true,
+            speed: 0.2,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200,
+            },
+          },
         },
-        "interactivity": {
-          "detect_on": "canvas",
-          "events": {
-            "onhover": {
-              "enable": true,
-              "mode": "bubble"
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "bubble",
             },
-            "onclick": {
-              "enable": true,
-              "mode": "push"
+            onclick: {
+              enable: true,
+              mode: "push",
             },
-            "resize": true
+            resize: true,
           },
-          "modes": {
-            "grab": {
-              "distance": 400,
-              "line_linked": {
-                "opacity": 1
-              }
+          modes: {
+            grab: {
+              distance: 400,
+              line_linked: {
+                opacity: 1,
+              },
             },
-            "bubble": {
-              "distance": 83.91608391608392,
-              "size": 1,
-              "duration": 3,
-              "opacity": 1,
-              "speed": 3
+            bubble: {
+              distance: 83.91608391608392,
+              size: 1,
+              duration: 3,
+              opacity: 1,
+              speed: 3,
             },
-            "repulse": {
-              "distance": 200,
-              "duration": 0.4
+            repulse: {
+              distance: 200,
+              duration: 0.4,
             },
-            "push": {
-              "particles_nb": 4
+            push: {
+              particles_nb: 4,
             },
-            "remove": {
-              "particles_nb": 2
-            }
-          }
+            remove: {
+              particles_nb: 2,
+            },
+          },
         },
-        "retina_detect": true
+        retina_detect: true,
       });
     }
   }
@@ -412,9 +414,9 @@
     12. Ripple
   --------------------------------------------------------------*/
   function rippleInit() {
-    if ($.exists('.st-ripple-version')) {
-      $('.st-ripple-version').each(function () {
-        $('.st-ripple-version').ripples({
+    if ($.exists(".st-ripple-version")) {
+      $(".st-ripple-version").each(function () {
+        $(".st-ripple-version").ripples({
           resolution: 512,
           dropRadius: 20,
           perturbance: 0.04,
@@ -427,26 +429,38 @@
     13. Parallax Effect
   --------------------------------------------------------------*/
   function parallaxEffect() {
-    $('.st-parallax').each(function() {
+    $(".st-parallax").each(function () {
       var windowScroll = $(document).scrollTop(),
         windowHeight = $(window).height(),
         barOffset = $(this).offset().top,
         barHeight = $(this).height(),
         barScrollAtZero = windowScroll - barOffset + windowHeight,
         barHeightWindowHeight = windowScroll + windowHeight,
-        barScrollUp = barOffset <= (windowScroll + windowHeight),
+        barScrollUp = barOffset <= windowScroll + windowHeight,
         barSctollDown = barOffset + barHeight >= windowScroll;
 
       if (barSctollDown && barScrollUp) {
         var calculadedHeight = barHeightWindowHeight - barOffset;
-        var largeEffectPixel = ((calculadedHeight / 5));
-        var mediumEffectPixel = ((calculadedHeight / 20));
-        var miniEffectPixel = ((calculadedHeight / 10));
+        var largeEffectPixel = calculadedHeight / 5;
+        var mediumEffectPixel = calculadedHeight / 20;
+        var miniEffectPixel = calculadedHeight / 10;
 
-        $(this).find('.st-to-left').css('transform', `translateX(-${miniEffectPixel}px)`);
-        $(this).find('.st-to-right').css('transform', `translateX(${miniEffectPixel}px)`);
-        $(this).css('background-position', `center -${largeEffectPixel}px`);
+        $(this)
+          .find(".st-to-left")
+          .css("transform", `translateX(-${miniEffectPixel}px)`);
+        $(this)
+          .find(".st-to-right")
+          .css("transform", `translateX(${miniEffectPixel}px)`);
+        $(this).css("background-position", `center -${largeEffectPixel}px`);
       }
     });
   }
 })(jQuery); // End of use strict
+
+ScrollReveal().reveal("#about", {
+  delay: 350,
+  distance: "50px",
+  duration: 500,
+  easing: "ease-in-out",
+  interval
+});
