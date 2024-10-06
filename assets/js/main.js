@@ -457,10 +457,69 @@
   }
 })(jQuery); // End of use strict
 
-ScrollReveal().reveal("#about", {
+ScrollReveal().reveal(".about_text", {
   delay: 350,
-  distance: "50px",
-  duration: 500,
-  easing: "ease-in-out",
-  interval
+  distance: "100px",
+  easing: "ease-out",
+  origin: 'right'
 });
+
+ScrollReveal().reveal(".about_img", {
+  delay: 350,
+  distance: "100px",
+  easing: "ease-out",
+  origin: 'left'
+});
+
+ScrollReveal().reveal(".about_big_text", {
+  delay: 350,
+  distance: "60px",
+  easing: "ease-out",
+  origin: 'top',
+  scale: 1.2
+});
+
+ScrollReveal().reveal(".service", {
+  delay: 200,
+  interval: 200,
+  easing: "ease-out",
+  scale: 1.2
+})
+
+ScrollReveal().reveal(".service_big_text", {
+  delay: 300,
+  distance: "60px",
+  easing: "ease-out",
+  origin: "top",
+  scale: 1.2
+})
+
+ScrollReveal().reveal(".skills_big_text", {
+  delay: 300,
+  distance: "60px",
+  easing: "ease-out",
+  origin: "top",
+  scale: 1.2
+})
+
+ScrollReveal().reveal(".skill_text", {
+  delay: 400,
+  distance: "60px",
+  easing: "ease-out",
+  origin: 'left'
+});
+
+ScrollReveal().reveal(".skill_text", {
+  delay: 400,
+  distance: "60px",
+  easing: "ease-out",
+  origin: 'left'
+});
+
+ScrollReveal().reveal(".skill_progress", {
+  delay: 400,
+  distance: "60px",
+  easing: "ease-out",
+  origin: 'right'
+});
+// fadeInLeft
