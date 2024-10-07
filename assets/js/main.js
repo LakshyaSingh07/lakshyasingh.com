@@ -108,71 +108,71 @@
   /*--------------------------------------------------------------
     5. One Page Navigation
   --------------------------------------------------------------*/
-  // function onePageNavigation() {
-  //   // Click To Go Top
-  //   $(".st-smooth-move").on("click", function () {
-  //     var thisAttr = $(this).attr("href");
-  //     if ($(thisAttr).length) {
-  //       var scrollPoint = $(thisAttr).offset().top - 10;
-  //       $("body,html").animate(
-  //         {
-  //           scrollTop: scrollPoint,
-  //         },
-  //         800
-  //       );
-  //     }
-  //     return false;
-  //   });
+  function onePageNavigation() {
+    // Click To Go Top
+    $(".st-smooth-move").on("click", function () {
+      var thisAttr = $(this).attr("href");
+      if ($(thisAttr).length) {
+        var scrollPoint = $(thisAttr).offset().top - 10;
+        $("body,html").animate(
+          {
+            scrollTop: scrollPoint,
+          },
+          800
+        );
+      }
+      return false;
+    });
 
-  //   // One Page Active Class
-  //   var topLimit = 300,
-  //     ultimateOffset = 200;
+    // One Page Active Class
+    var topLimit = 300,
+      ultimateOffset = 200;
 
-  //   $(".st-onepage-nav").each(function () {
-  //     var $this = $(this),
-  //       $parent = $this.parent(),
-  //       current = null,
-  //       $findLinks = $this.find("a");
+    $(".st-onepage-nav").each(function () {
+      var $this = $(this),
+        $parent = $this.parent(),
+        current = null,
+        $findLinks = $this.find("a");
 
-  //     function getHeader(top) {
-  //       var last = $findLinks.first();
-  //       if (top < topLimit) {
-  //         return last;
-  //       }
-  //       for (var i = 0; i < $findLinks.length; i++) {
-  //         var $link = $findLinks.eq(i),
-  //           href = $link.attr("href");
+      function getHeader(top) {
+        var last = $findLinks.first();
+        if (top < topLimit) {
+          return last;
+        }
+        for (var i = 0; i < $findLinks.length; i++) {
+          var $link = $findLinks.eq(i),
+            href = $link.attr("href");
 
-  //         if (href.charAt(0) === "#" && href.length > 1) {
-  //           var $anchor = $(href).first();
-  //           if ($anchor.length > 0) {
-  //             var offset = $anchor.offset();
-  //             if (top < offset.top - ultimateOffset) {
-  //               return last;
-  //             }
-  //             last = $link;
-  //           }
-  //         }
-  //       }
-  //       return last;
-  //     }
+          if (href.charAt(0) === "#" && href.length > 1) {
+            var $anchor = $(href).first();
+            if ($anchor.length > 0) {
+              var offset = $anchor.offset();
+              if (top < offset.top - ultimateOffset) {
+                return last;
+              }
+              last = $link;
+            }
+          }
+        }
+        return last;
+      }
 
-  //     $(window).on("scroll", function () {
-  //       var top = window.scrollY,
-  //         height = $this.outerHeight(),
-  //         max_bottom = $parent.offset().top + $parent.outerHeight(),
-  //         bottom = top + height + ultimateOffset;
+      $(window).on("scroll", function () {
+        var top = window.scrollY,
+          height = $this.outerHeight(),
+          max_bottom = $parent.offset().top + $parent.outerHeight(),
+          bottom = top + height + ultimateOffset;
 
-  //       var $current = getHeader(top);
+        var $current = getHeader(top);
 
-  //       if (current !== $current) {
-  //         $this.find(".active").removeClass("active");
-  //         $current.addClass("active");
-  //         current = $current;
-  //       }
-  //     });
-  //   });
-  // }
+        if (current !== $current) {
+          $this.find(".active").removeClass("active");
+          $current.addClass("active");
+          current = $current;
+        }
+      });
+    });
+  }
 
   /*--------------------------------------------------------------
     6. Progress Bar
