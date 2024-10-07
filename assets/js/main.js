@@ -514,18 +514,44 @@ ScrollReveal().reveal(".skill_text", {
   origin: "left",
 });
 
-ScrollReveal().reveal(".skill_text", {
-  delay: 400,
-  distance: "60px",
-  easing: "ease-out",
-  origin: "left",
-});
-
 ScrollReveal().reveal(".skill_progress", {
   delay: 400,
   distance: "60px",
   easing: "ease-out",
   origin: "right",
 });
+
+ScrollReveal().reveal(".resume_big_text", {
+  delay: 300,
+  distance: "60px",
+  easing: "ease-out",
+  origin: "top",
+  scale: 1.2,
+});
+
+ScrollReveal().reveal(".exp_text", {
+  delay: 200,
+  interval: 200,
+  easing: "ease-out",
+  distance: "60px",
+  origin: "top"
+});
+
+ScrollReveal().reveal(".edu_text", {
+  delay: 200,
+  interval: 200,
+  easing: "ease-out",
+  distance: "60px",
+  origin: "top"
+});
+
+ScrollReveal().reveal(".exp_ani", {
+  delay: 200,
+  // interval: 200,
+  easing: "ease-out",
+  distance: "60px",
+  origin: "top"
+});
+
 
 // fadeInLeft
