@@ -508,7 +508,7 @@ ScrollReveal().reveal(".skills_big_text", {
 });
 
 ScrollReveal().reveal(".skill_text", {
-  delay: 400,
+  delay: 300,
   distance: "60px",
   easing: "ease-out",
   origin: "left",
@@ -552,6 +552,13 @@ ScrollReveal().reveal(".exp_ani", {
   distance: "60px",
   origin: "top"
 });
+
+ScrollReveal().reveal(".foot", {
+  delay: 300,
+  easing: "ease-in",
+  // distance: "1px",
+  origin: "bottom"
+})
 
 
 // fadeInLeft
