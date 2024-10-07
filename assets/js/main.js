@@ -522,4 +522,5 @@ ScrollReveal().reveal(".skill_progress", {
   easing: "ease-out",
   origin: 'right'
 });
+
 // fadeInLeft
