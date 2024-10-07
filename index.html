@@ -7,7 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Lakshya" />
     <!-- Page Title -->
-    <title>Lakshya Singh - Portfolio</title>
+    <title>Lakshya Singh</title>
+    <script>
+      // Store the original title
+      var originalTitle = document.title;
+      // Listen for visibility change events
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+          // When the user leaves the tab, change the title
+          document.title = "Come back :(";
+        } else {
+          // When the user returns, reset the title to the original
+          document.title = originalTitle;
+        }
+      });
+    </script>
     <!-- Favicon Icon -->
     <link rel="icon" href="assets/img/favicon.png" />
     <!-- Stylesheets -->
@@ -43,7 +57,9 @@
                   <li>
                     <a href="#portfolio" class="st-smooth-move">Portfolio</a>
                   </li>
-                  <li><a href="comingSoon.html" class="st-smooth-move">Blogs</a></li>
+                  <li>
+                    <a href="comingSoon.html" class="st-smooth-move">Blogs</a>
+                  </li>
                   <li><a href="#contact" class="st-smooth-move">Contact</a></li>
                 </ul>
                 <div class="sp-phone">
@@ -87,7 +103,7 @@
       </div>
       <!-- Hero Image - Social Link Group -->
       <div class="st-hero-img st-to-right">
-        <img class="wow fadeInRight " src="myAssests/her.svg" alt="Hero" />
+        <img class="wow fadeInRight" src="myAssests/her.svg" alt="Hero" />
         <div class="st-social-group wow fadeInLeft">
           <div class="st-social-link">
             <a
@@ -685,7 +701,7 @@
               <div class="st-resume-timeline-wrap">
                 <div class="st-resume-timeline exp_ani">
                   <h3 class="st-resume-timeline-title">Web Developer</h3>
-                  <div class="st-resume-timeline-duration ">
+                  <div class="st-resume-timeline-duration">
                     Jul 2024 - Present
                   </div>
                   <h4 class="st-resume-timeline-subtitle">Freelance, Remote</h4>
