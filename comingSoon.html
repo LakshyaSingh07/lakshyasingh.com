@@ -4,8 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coming Soon!!!</title>
+    <script>
+      // Store the original title
+      var originalTitle = document.title;
+      // Listen for visibility change events
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+          // When the user leaves the tab, change the title
+          document.title = "Come back :(";
+        } else {
+          // When the user returns, reset the title to the original
+          document.title = originalTitle;
+        }
+      });
+    </script>
     <link rel="stylesheet" href="assets/css/comingsoon.css" />
     <!-- <link rel="stylesheet" href="assets/css/fontawesome.css" /> -->
+    <link rel="icon" href="myAssests/favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
