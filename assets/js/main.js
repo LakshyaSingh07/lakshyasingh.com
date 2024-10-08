@@ -534,7 +534,7 @@ ScrollReveal().reveal(".exp_text", {
   interval: 200,
   easing: "ease-out",
   distance: "60px",
-  origin: "top"
+  origin: "top",
 });
 
 ScrollReveal().reveal(".edu_text", {
@@ -542,7 +542,7 @@ ScrollReveal().reveal(".edu_text", {
   interval: 200,
   easing: "ease-out",
   distance: "60px",
-  origin: "top"
+  origin: "top",
 });
 
 ScrollReveal().reveal(".exp_ani", {
@@ -550,15 +550,14 @@ ScrollReveal().reveal(".exp_ani", {
   // interval: 200,
   easing: "ease-out",
   distance: "60px",
-  origin: "top"
+  origin: "top",
 });
 
 ScrollReveal().reveal(".foot", {
   delay: 300,
   easing: "ease-in",
   // distance: "1px",
-  origin: "bottom"
-})
-
+  origin: "bottom",
+});
 
 // fadeInLeft
