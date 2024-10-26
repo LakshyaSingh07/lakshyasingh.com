@@ -424,7 +424,8 @@
               </div>
               <h2 class="st-iconbox-title">Video Editing</h2>
               <div class="st-iconbox-text">
-                Editing reels and short videos with smooth transitions and effects in professional way.
+                Editing reels and short videos with smooth transitions and
+                effects in professional way.
               </div>
             </div>
             <div class="st-height-b0 st-height-lg-b30"></div>
@@ -461,7 +462,8 @@
               </div>
               <h2 class="st-iconbox-title">Graphic Design</h2>
               <div class="st-iconbox-text">
-                Offering creative graphic design services to elevate your visual content.
+                Offering creative graphic design services to elevate your visual
+                content.
               </div>
             </div>
             <div class="st-height-b0 st-height-lg-b30"></div>
@@ -508,7 +510,8 @@
               </div>
               <h2 class="st-iconbox-title">App Development</h2>
               <div class="st-iconbox-text">
-                Developing custom Android apps with seamless functionality and user-friendly design.
+                Developing custom Android apps with seamless functionality and
+                user-friendly design.
               </div>
             </div>
             <div class="st-height-b0 st-height-lg-b30"></div>
@@ -867,10 +870,7 @@
                   class="st-portfolio st-zoom st-lightbox-item"
                 >
                   <div class="st-portfolio-img st-zoom-in">
-                    <img
-                      src="myAssests/project2.png"
-                      alt="portfolio"
-                    />
+                    <img src="myAssests/project2.png" alt="portfolio" />
                   </div>
                   <div class="st-portfolio-item-hover">
                     <i class="fas fa-plus-circle"></i>
@@ -889,10 +889,7 @@
                   class="st-portfolio st-zoom st-lightbox-item"
                 >
                   <div class="st-portfolio-img st-zoom-in">
-                    <img
-                      src="myAssests/project3.png"
-                      alt="portfolio"
-                    />
+                    <img src="myAssests/project3.png" alt="portfolio" />
                   </div>
                   <div class="st-portfolio-item-hover">
                     <i class="fas fa-plus-circle"></i>
@@ -1301,5 +1298,23 @@
     <script src="assets/js/ripples.min.js"></script>
     <script src="assets/js/particles.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      // Disable right-click
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
+
+      // Disable specific key combinations
+      document.addEventListener("keydown", function (e) {
+        // Prevent Ctrl+Shift+I (Inspect), Ctrl+U (View Source), and F12 (DevTools)
+        if (
+          (e.ctrlKey && (e.key === "u" || e.key === "U")) ||
+          (e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
+          e.key === "F12"
+        ) {
+          e.preventDefault();
+        }
+      });
+    </script>
   </body>
 </html>
