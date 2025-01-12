@@ -4,7 +4,7 @@
       "date": "January 10, 2025",
       "summary": "A deep dive into closures in JavaScript and their practical applications.",
       "image": "../assets/img/blog/blog1.jpg",
-      "link": "first-blog/"
+      "link": "/first-blog/"
     },
     {
       "title": "CSS Grid Layout: A Comprehensive Guide",
