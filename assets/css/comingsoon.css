@@ -1,7 +1,7 @@
 /* Dark theme colors */
 
 /* Primary theme colors */
-body[data-theme='light_theme'] {
+/* body[data-theme='light_theme'] {
     --white: #fff;
     --bg-color: #F8F8F8;
     --color: #333;
@@ -91,4 +91,128 @@ body[data-theme='light_theme'] {
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
     text-decoration: none;
+  } */
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.blog-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.blog-post {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  width: calc(33% - 20px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-post-content {
+  padding: 15px;
+}
+
+.blog-post-content h2 {
+  margin-top: 0;
+}
+
+.blog-post-content p {
+  color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blog-post {
+    width: calc(50% - 20px);
   }
+}
+
+@media (max-width: 480px) {
+  .blog-post {
+    width: 100%;
+  }
+}
+
+.blog-section {
+  margin: 50px auto;
+  width: 80%;
+  text-align: center;
+}
+
+.blog-post {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.blog-post img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+
+.blog-content {
+  padding: 15px;
+}
+
+.blog-content h3 {
+  margin-top: 0;
+}
+
+.blog-content p {
+  color: #555;
+}

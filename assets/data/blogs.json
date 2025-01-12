@@ -1,0 +1,17 @@
+[
+    {
+      "title": "Understanding JavaScript Closures",
+      "date": "January 10, 2025",
+      "summary": "A deep dive into closures in JavaScript and their practical applications.",
+      "image": "../assets/img/blog/blog1.jpg",
+      "link": "first-blog"
+    },
+    {
+      "title": "CSS Grid Layout: A Comprehensive Guide",
+      "date": "January 5, 2025",
+      "summary": "Learn how to create complex layouts easily with CSS Grid.",
+      "image": "../assets/img/blog/blog2.jpg",
+      "link": "sec-blog"
+    }
+  ]
+  
