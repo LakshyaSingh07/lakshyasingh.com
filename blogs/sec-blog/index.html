@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sec-blog</title>
-</head>
-<body>
-    <h1>Sec Blog Post</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Post</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="/" class="logo">Lakshya's Blog</a>
+        <div class="search-bar">
+          <input
+            type="text"
+            placeholder="Search blog posts..."
+            id="search-input"
+          />
+          <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <!-- <a href="/" class="main-link">Back to Home</a> -->
+      </div>
+    </nav>
+    <div id="blog-posts-container">
+      <!-- Dynamic blog posts will be loaded here -->
+    </div>
+    <div class="blog-container">
+      <!-- Blog Header -->
+      <header class="blog-header">
+        <h1 class="blog-title">Loading...</h1>
+        <div class="blog-author-container">
+          <div class="blog-author">
+            <img
+              src=""
+              alt="Author Image"
+              class="author-image"
+              id="author-img"
+            />
+            <div class="author-info">
+              <p class="author-name" id="author-name">Loading...</p>
+              <p class="publish-date" id="publish-date">Loading...</p>
+            </div>
+          </div>
+          <!-- Dynamic Buttons -->
+          <div class="blog-actions">
+            <button class="share-button" id="share-button">
+              <i class="fas fa-share"></i> Share
+            </button>
+            <div class="share-options" id="share-options">
+              <a href="#" id="whatsapp-share" target="_blank">WhatsApp</a>
+              <button id="copy-link">Copy Link</button>
+            </div>
+          </div>
+        </div>
+        <hr class="separator" />
+      </header>
+
+      <!-- Blog Content -->
+      <article class="blog-content" id="blog-content">
+        <!-- Content will be dynamically loaded -->
+      </article>
+
+      <!-- Footer Actions -->
+      <footer class="footer-actions">
+        <button class="share-button" id="footer-share-button">
+          <i class="fas fa-share"></i> Share
+        </button>
+        <div class="share-options" id="footer-share-options">
+          <a href="#" id="footer-whatsapp-share" target="_blank">WhatsApp</a>
+          <button id="footer-copy-link">Copy Link</button>
+        </div>
+      </footer>
+    </div>
+
+    <div id="copy-notification" class="notification hidden">
+      Link copied to clipboard!
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

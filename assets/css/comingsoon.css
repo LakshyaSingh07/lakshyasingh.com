@@ -28,7 +28,7 @@ body::-webkit-scrollbar {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
   overflow: hidden;
-  width: calc(33%, 30);
+  /* width: calc(33%, 30); */
 }
 
 .blog-post img {

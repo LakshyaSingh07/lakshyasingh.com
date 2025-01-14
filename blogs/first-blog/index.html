@@ -3,9 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New Blogs</title>
+    <title>Blog Page</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>First Blog</h1>
+    
+    <div class="blog-container">
+      <!-- Blog Header -->
+      <header class="blog-header">
+        <h1 class="blog-title">How JavaScript Closures Work</h1>
+        <div class="blog-author">
+          <img src="img/blog-image-2.jpg" alt="Author Image" class="author-image" />
+          <div class="author-info">
+            <p class="author-name">Lakshya Singh</p>
+            <p class="publish-date">Published on January 12, 2025</p>
+          </div>
+        </div>
+        <hr class="separator" />
+      </header>
+
+      <!-- Blog Content -->
+      <article class="blog-content">
+        <p>
+          JavaScript closures are one of the most important concepts to
+          understand for mastering the language. A closure is created when a
+          function remembers the variables from its lexical scope, even when the
+          function is executed outside that scope.
+        </p>
+        <img
+          src="img/blog-image-1.jpg"
+          alt="Closures Illustration"
+          class="blog-image"
+        />
+        <p>
+          Closures are useful in a <b>variety of scenarios</b>, such as data
+          encapsulation, event handlers, and creating private variables. Let’s
+          dive into an example:
+        </p>
+        <pre>
+function outerFunction(outerVariable) {
+    return function innerFunction(innerVariable) {
+        console.log(`Outer Variable: ${outerVariable}`);
+        console.log(`Inner Variable: ${innerVariable}`);
+    }
+}
+
+const closureExample = outerFunction('outside');
+closureExample('inside');
+      </pre
+        >
+        <p>
+          This is just the tip of the iceberg when it comes to closures. By
+          understanding how they work, you can write more efficient and modular
+          JavaScript code.
+        </p>
+      </article>
+    </div>
   </body>
 </html>
