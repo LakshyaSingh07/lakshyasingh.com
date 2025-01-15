@@ -192,41 +192,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Function to display random blogs
-// function displayRandomBlogs(posts, count = 3) {
-//   const randomBlogsContainer = document.getElementById("random-blogs-list");
-
-//   if (!randomBlogsContainer || posts.length === 0) return;
-
-//   // Shuffle the posts array to get random blogs
-//   const shuffledPosts = posts.sort(() => Math.random() - 0.5);
-
-//   // Select the first `count` blogs
-//   const randomPosts = shuffledPosts.slice(0, count);
-
-//   // Clear the container
-//   randomBlogsContainer.innerHTML = "";
-
-//   // Generate the random blog cards
-//   randomPosts.forEach((post) => {
-//     const postElement = document.createElement("div");
-//     postElement.classList.add("random-blog-card");
-
-//     postElement.innerHTML = `
-//       <img src="${post.image}" alt="${post.title}">
-//       <h3>${post.title}</h3>
-//       <a href="${post.link}">Read More</a>
-//     `;
-
-//     randomBlogsContainer.appendChild(postElement);
-//   });
-// }
-
 document.addEventListener("DOMContentLoaded", () => {
   const blogPostsContainer = document.getElementById("blogscontainer");
 
   // Fetch the JSON data
-  fetch("../../assets/data/blogs.json")
+  fetch("../data/blogs.json")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Failed to load JSON data.");
