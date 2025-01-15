@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
         postElement.innerHTML = `
           <img src="${post.image}" alt="${post.title}">
           <div>
-            <h3><a href="${post.link}" target="_blank">${post.title}</a></h3>
+            <h3><a href="${post.link}">${post.title}</a></h3>
             <p><em>${post.date}</em></p>
             <p>${post.summary}</p>
           </div>
