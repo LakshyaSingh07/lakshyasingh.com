@@ -4,6 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog Post</title>
+    <script>
+      // Store the original title
+      var originalTitle = document.title;
+      // Listen for visibility change events
+      document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+          // When the user leaves the tab, change the title
+          document.title = "Come back :(";
+        } else {
+          // When the user returns, reset the title to the original
+          document.title = originalTitle;
+        }
+      });
+    </script>
+    <link rel="icon" href="../../myAssests/favicon.png" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -76,15 +91,15 @@
       Link copied to clipboard!
     </div>
     <div class="blog-section">
-    <div id="random-blogs-container">
-      <div id="blog-post"></div>
-      <div id="blogscontainer">
-      <h2>Related Blogs</h2>
-      <div id="blog-posts-container">
-        <!-- Random blogs will be dynamically added here -->
+      <div id="random-blogs-container">
+        <div id="blog-post"></div>
+        <div id="blogscontainer">
+          <h2>Related Blogs</h2>
+          <div id="blog-posts-container">
+            <!-- Random blogs will be dynamically added here -->
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>

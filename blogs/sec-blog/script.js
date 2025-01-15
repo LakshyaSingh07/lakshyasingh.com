@@ -126,7 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Search functionality
   searchButton.addEventListener("click", () => {
     const searchTerm = searchInput.value.toLowerCase().trim();
 
@@ -167,6 +166,48 @@ document.addEventListener("DOMContentLoaded", () => {
       displayPosts(filteredPosts);
     }
   });
+
+  // Search functionality
+  // searchButton.addEventListener("click", () => {
+  //   const searchTerm = searchInput.value.toLowerCase().trim();
+
+  //   if (searchTerm === "") {
+  //     // If search term is empty, clear the display
+  //     blogPostsContainer.innerHTML = "";
+  //   } else {
+  //     // Filter posts based on the search term
+  //     const filteredPosts = blogPosts.filter((post) => {
+  //       return (
+  //         post.title.toLowerCase().includes(searchTerm) ||
+  //         post.summary.toLowerCase().includes(searchTerm)
+  //       );
+  //     });
+
+  //     // Display the filtered posts
+  //     displayPosts(filteredPosts);
+  //   }
+  // });
+
+  // // Optional: Implement live search (trigger search as user types)
+  // searchInput.addEventListener("input", () => {
+  //   const searchTerm = searchInput.value.toLowerCase().trim();
+
+  //   if (searchTerm === "") {
+  //     // If search term is empty, clear the display
+  //     blogPostsContainer.innerHTML = "";
+  //   } else {
+  //     // Filter posts based on the search term
+  //     const filteredPosts = blogPosts.filter((post) => {
+  //       return (
+  //         post.title.toLowerCase().includes(searchTerm) ||
+  //         post.summary.toLowerCase().includes(searchTerm)
+  //       );
+  //     });
+
+  //     // Display the filtered posts
+  //     displayPosts(filteredPosts);
+  //   }
+  // });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
