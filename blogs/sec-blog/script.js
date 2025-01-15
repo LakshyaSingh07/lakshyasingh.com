@@ -126,29 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Function to fetch blog data and store it
-  // function fetchBlogData() {
-  //   if (blogPosts.length === 0) {
-  //     fetch("../assets/data/blogs.json") // Path to your blog data file
-  //       .then((response) => {
-  //         if (!response.ok) {
-  //           throw new Error("Failed to load blog data");
-  //         }
-  //         return response.json();
-  //       })
-  //       .then((data) => {
-  //         blogPosts = data; // Store the blog posts data
-  //         localStorage.setItem("blogPosts", JSON.stringify(blogPosts)); // Save data to localStorage
-  //       })
-  //       .catch((error) => {
-  //         console.error("Error loading blog posts:", error);
-  //       });
-  //   }
-  // }
-
-  // Initially fetch blog data (but don't display anything)
-  fetchBlogData();
-
   // Search functionality
   searchButton.addEventListener("click", () => {
     const searchTerm = searchInput.value.toLowerCase().trim();
