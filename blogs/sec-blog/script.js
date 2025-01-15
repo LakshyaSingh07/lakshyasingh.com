@@ -128,10 +128,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   searchButton.addEventListener("click", () => {
     const searchTerm = searchInput.value.toLowerCase().trim();
+    console.log("Search term:", searchTerm);
 
     if (searchTerm === "") {
       // If search term is empty, clear the display
       blogPostsContainer.innerHTML = "";
+      console.log("Cleared blog posts container");
     } else {
       // Filter posts based on the search term
       const filteredPosts = blogPosts.filter((post) => {
@@ -143,16 +145,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Display the filtered posts
       displayPosts(filteredPosts);
+      console.log("Displayed filtered posts:", filteredPosts);
     }
   });
 
   // Optional: Implement live search (trigger search as user types)
   searchInput.addEventListener("input", () => {
     const searchTerm = searchInput.value.toLowerCase().trim();
+    console.log("Search term:", searchTerm);
 
     if (searchTerm === "") {
       // If search term is empty, clear the display
       blogPostsContainer.innerHTML = "";
+      console.log("Cleared blog posts container");
     } else {
       // Filter posts based on the search term
       const filteredPosts = blogPosts.filter((post) => {
@@ -164,6 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Display the filtered posts
       displayPosts(filteredPosts);
+      console.log("Displayed filtered posts:", filteredPosts);
     }
   });
 
