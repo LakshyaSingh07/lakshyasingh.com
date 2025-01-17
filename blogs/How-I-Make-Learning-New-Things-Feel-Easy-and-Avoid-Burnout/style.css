@@ -7,7 +7,7 @@
 
 /* Body Styles */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Roboto", "Arial";
   line-height: 1.6;
   background-color: #f9f9f9;
   color: #333;
@@ -98,6 +98,12 @@ body {
   border-radius: 4px;
   font-family: "Courier New", Courier, monospace;
   text-align: left;
+}
+
+.blog-content p i {
+  font-family: "Yellowtail", serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 /* Navbar Styles */

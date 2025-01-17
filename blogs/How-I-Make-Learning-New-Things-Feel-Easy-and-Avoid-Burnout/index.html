@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Post</title>
+    <title>How I Make Learning New Things Feel Easy and Avoid Burnout</title>
     <script>
       // Store the original title
       var originalTitle = document.title;
@@ -18,6 +18,12 @@
         }
       });
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jersey+15&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="../../myAssests/favicon.png" />
   </head>
@@ -95,5 +101,23 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></script>
     <script src="script.js"></script>
+    <script>
+      // Disable right-click
+      document.addEventListener("contextmenu", function (e) {
+        e.preventDefault();
+      });
+
+      // Disable specific key combinations
+      document.addEventListener("keydown", function (e) {
+        // Prevent Ctrl+Shift+I (Inspect), Ctrl+U (View Source), and F12 (DevTools)
+        if (
+          (e.ctrlKey && (e.key === "u" || e.key === "U")) ||
+          (e.ctrlKey && e.shiftKey && (e.key === "i" || e.key === "I")) ||
+          e.key === "F12"
+        ) {
+          e.preventDefault();
+        }
+      });
+    </script>
   </body>
 </html>
