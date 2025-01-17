@@ -91,12 +91,13 @@ body {
 }
 
 .blog-content pre {
-  background: #f4f4f4;
+  /* background: #f4f4f4; */
   padding: 10px;
   border-left: 4px solid #6a11cb;
-  overflow-x: auto;
+  overflow-x: hidden; /*scroll bar hide*/
   border-radius: 4px;
   font-family: "Courier New", Courier, monospace;
+  text-align: left;
 }
 
 /* Navbar Styles */
@@ -300,10 +301,18 @@ body {
   margin-bottom: 20px;
 }
 
+#blog-posts-container {
+  text-decoration: none;
+}
+
 #random-blogs-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+}
+
+.blog-post h3 a {
+  text-decoration: none;
 }
 
 .random-blog-card {
@@ -427,5 +436,9 @@ body {
   .blog-post img {
     width: 100%;
     border-radius: 8px;
+  }
+  .blog-content pre {
+    white-space: pre-wrap; /* This will wrap the text inside <pre> */
+    word-wrap: break-word;
   }
 }
