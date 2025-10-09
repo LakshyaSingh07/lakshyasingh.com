@@ -1,0 +1,9 @@
+{
+    "redirects": [
+        {
+            "source": "https://www.lakshyasingh.com/:path*",
+            "destination": "https://lakshyasingh.com/:path*",
+            "permanent": true
+        }
+    ]
+}
