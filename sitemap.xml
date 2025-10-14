@@ -6,7 +6,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://lakshyasingh.com/</loc>
+    <loc>https://www.lakshyasingh.com/</loc>
     <lastmod>2025-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- Blogs Listing Page -->
   <url>
-    <loc>https://lakshyasingh.com/blogs</loc>
+    <loc>https://www.lakshyasingh.com/blogs</loc>
     <lastmod>2025-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -22,7 +22,7 @@
 
   <!-- Blog Post 1 -->
   <url>
-    <loc>https://lakshyasingh.com/blogs/How-I-Make-Learning-New-Things-Feel-Easy-and-Avoid-Burnout/</loc>
+    <loc>https://www.lakshyasingh.com/blogs/How-I-Make-Learning-New-Things-Feel-Easy-and-Avoid-Burnout/</loc>
     <lastmod>2025-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
